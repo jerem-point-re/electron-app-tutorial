@@ -233,3 +233,53 @@ func()
 
 > [!WARNING]
 > For the rest of the tutorial, we will be shifting away from application code and giving you a look at how you can get your app from your developer machine into end users' hands.
+
+---
+
+## Packaging Your Application
+
+### Importing your project into Forge
+
+> You can install Electron Forge's CLI in your project's `devDependencies` and import your existing project with a handy conversion script.
+
+```sh
+npm install --save-dev @electron-forge/cli
+npx electron-forge import
+```
+
+### Creating a distributable
+
+> To create a distributable, use your project's new `make` script, which runs the `electron-forge make` command:
+
+```sh
+npm run make
+```
+
+> After the script runs, you should see an `out` folder containing both the distributable and a folder containing the packaged application code.
+>> The distributable in the `out/make` folder should be ready to launch! You have now created your first bundled Electron application
+
+> [!NOTE]
+> Distributable formats
+> Electron Forge can be configured to create distributables in different OS-specific formats (e.g. DMG, deb, MSI, etc.). See Forge's **[Makers](https://www.electronforge.io/config/makers)** documentation for all configuration options.
+
+> [!ITP]
+> Creating and adding application icons
+> Setting custom application icons requires a few additions to your config. Check out **[Forge's icon tutorial](https://www.electronforge.io/guides/create-and-add-icons)** for more information.
+
+> [!WARNING]
+> Packaging without Electron Forge
+> If you want to manually package your code, or if you're just interested understanding the mechanics behind packaging an Electron app, check out the full **[Application Packaging](https://www.electronjs.org/docs/latest/tutorial/application-distribution)** documentation.
+
+### Important: signing your code
+
+> [!IMPORTANT]
+> In order to distribute desktop applications to end users, we *highly* recommend that you code sign your Electron app. Code signing is an important part of shipping desktop applications, and is mandatory for the auto-update step in the final part of the tutorial.
+
+> [!IMPORTANT]
+> Code signing is a security technology that you use to certify that a desktop app was created by a known source. Windows and macOS have their own OS-specific code signing systems that will make it difficult for users to download or launch unsigned applications.
+
+> [!IMPORTANT]
+> On macOS, code signing is done at the app packaging level. On Windows, distributable installers are signed instead. If you already have code signing certificates for Windows and macOS, you can set your credentials in your Forge configuration.
+
+> [!NOTE]
+> For more information on code signing, check out the **[Signing Apps](https://www.electronforge.io/guides/code-signing)** guide in the Forge docs.
