@@ -3,7 +3,7 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
   packagerConfig: {
-    icon: 'images/icon',
+    icon: 'icon',
     asar: true,
   },
   rebuildConfig: {},
@@ -24,6 +24,19 @@ module.exports = {
       name: '@electron-forge/maker-rpm',
       config: {},
     },
+  ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'jerem-point-re',
+          name: 'electron-app-tutorial'
+        },
+        prerelease: false,
+        draft: true
+      }
+    }
   ],
   plugins: [
     {
