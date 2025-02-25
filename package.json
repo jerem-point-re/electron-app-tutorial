@@ -1,0 +1,33 @@
+{
+  "name": "my-1st-tutorial-using-electron",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "keywords": [
+    "electron",
+    "app",
+    "tutorial",
+    "node",
+    "npm",
+    "dev"
+  ],
+  "homepage": "https://github.com/jerem-point-re/electron-app-tutorial#readme",
+  "bugs": {
+    "url": "https://github.com/jerem-point-re/electron-app-tutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerem-point-re/electron-app-tutorial.git"
+  },
+  "license": "MIT",
+  "author": "jerem.re",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "qunit"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "qunit": "^2.24.1"
+  }
+}
