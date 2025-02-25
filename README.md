@@ -283,3 +283,49 @@ npm run make
 
 > [!NOTE]
 > For more information on code signing, check out the **[Signing Apps](https://www.electronforge.io/guides/code-signing)** guide in the Forge docs.
+
+---
+
+## Publishing and Updating
+
+### Using update.electronjs.org
+
+> The Electron maintainers provide a free auto-updating service for open-source apps at https://update.electronjs.org. Its requirements are:
+> - [x] Your app runs on macOS or Windows | I developed on Mac 
+> - [x] Your app has a public GitHub repository | You're actually on this repository 😅
+> - [ ] Builds are published to **[GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)** | Dunno if I can, will try 😉
+> - [ ] Builds are **[code signed](https://www.electronjs.org/docs/latest/tutorial/code-signing)** (macOS only) | Sorry I'm broke 😭😂
+
+### Publishing a GitHub release
+
+#### Generating a personal access token
+
+> Forge cannot publish to any repository on GitHub without permission. You need to pass in an authenticated token that gives Forge access to your GitHub releases. The easiest way to do this is to **[create a new personal access token (PAT)](https://github.com/settings/tokens/new)** with the `public_repo` scope, which gives write access to your public repositories. **Make sure to keep this token a secret**.
+
+#### Setting up the GitHub Publisher
+
+> Forge's **[GitHub Publisher](https://www.electronforge.io/config/publishers/github)** is a plugin that needs to be installed in your project's `devDependencies`:
+
+```sh
+npm install --save-dev @electron-forge/publisher-github
+```
+
+#### Configuring the publisher in Forge
+
+> Once you have it installed, you need to set it up in your Forge configuration. A full list of options is documented in the Forge's **[`PublisherGitHubConfig`](https://js.electronforge.io/interfaces/_electron_forge_publisher_github.PublisherGitHubConfig.html)** API docs.
+
+##### Icon
+> Description
+>> Set of icons about work and education
+
+> Date
+>> 31 March 2020
+
+> Source
+>> www.flaticon.com
+
+> Author
+>> Good Ware and monkik edited by Bruce The Deus
+
+> License
+>> [Creative Commons](https://en.wikipedia.org/wiki/en:Creative_Commons) & [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
