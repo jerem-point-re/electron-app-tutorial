@@ -7,3 +7,8 @@ contextBridge.exposeInMainWorld('versions', {
     ping: () => ipcRenderer.invoke('ping')
     // we can also expose variables, not just functions
 })
+
+contextBridge.exposeInMainWorld('darkMode', {
+    toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
+    system: () => ipcRenderer.invoke('dark-mode:system')
+})
