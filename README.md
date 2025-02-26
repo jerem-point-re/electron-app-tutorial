@@ -262,7 +262,7 @@ npm run make
 > Distributable formats
 > Electron Forge can be configured to create distributables in different OS-specific formats (e.g. DMG, deb, MSI, etc.). See Forge's **[Makers](https://www.electronforge.io/config/makers)** documentation for all configuration options.
 
-> [!ITP]
+> [!TIP]
 > Creating and adding application icons
 > Setting custom application icons requires a few additions to your config. Check out **[Forge's icon tutorial](https://www.electronforge.io/guides/create-and-add-icons)** for more information.
 
@@ -291,10 +291,10 @@ npm run make
 ### Using update.electronjs.org
 
 > The Electron maintainers provide a free auto-updating service for open-source apps at https://update.electronjs.org. Its requirements are:
-> - [x] Your app runs on macOS or Windows | I developed on Mac 
+> - [x] Your app runs on macOS or Windows | I developed on Mac 🍏
 > - [x] Your app has a public GitHub repository | You're actually on this repository 😅
-> - [ ] Builds are published to **[GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)** | Dunno if I can, will try 😉
-> - [ ] Builds are **[code signed](https://www.electronjs.org/docs/latest/tutorial/code-signing)** (macOS only) | Sorry I'm broke 😭😂
+> - [x] Builds are published to **[GitHub releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)** | ~~Dunno if I can, will try 😉~~ I published an archive with the packaged files, at least 🤐
+> - [ ] Builds are **[code signed](https://www.electronjs.org/docs/latest/tutorial/code-signing)** (macOS only) | Sorry I'm broke 😭😂 I still not pay 99 bucks for a year..
 
 ### Publishing a GitHub release
 
